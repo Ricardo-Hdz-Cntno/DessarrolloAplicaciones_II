@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>#{str.countryFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.countryFormHeader}</h2>
+                <p:fieldset legend="#{str.countryLegendForm}">
+                    <h:form>
+                        <p:inputText placeholder="#{str.countryNamePrompt}" 
+                                     value="#{paisBean.pais.nombre}"></p:inputText>
+                        <p:inputText placeholder="#{str.countryCapitalPrompt}"
+                                     value="#{paisBean.pais.capital}"></p:inputText>
+                        <p:inputText placeholder="#{str.countryLanguajePrompt}"
+                                     value="#{paisBean.pais.lenguaje}"></p:inputText>
+                        <p:commandButton value="#{str.buttonSave}" action="#{paisBean.guardar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonDelete}" action="#{paisBean.eliminar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonCancel}" action="#{paisBean.cancelar()}"></p:commandButton>
+                    </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

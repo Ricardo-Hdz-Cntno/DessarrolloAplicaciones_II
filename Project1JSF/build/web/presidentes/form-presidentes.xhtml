@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>#{str.presidentFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.presidentFormHeader}</h2>
+                <p:fieldset legend="#{str.presidentLegendForm}">
+                    <h:form>
+                        <h:panelGrid columns="1">
+                            <p:inputText placeholder="#{str.presidentNamePrompt}"
+                                         value="#{presidenteBean.presidente.nombre}"></p:inputText>
+                        <p:inputText placeholder="#{str.presidentLastNameP}"
+                                     value="#{presidenteBean.presidente.apellidoP}"></p:inputText>
+                        <p:inputText placeholder="#{str.presidentLastNameM}"
+                                     value="#{presidenteBean.presidente.apellidoM}"></p:inputText>
+                        <p:selectOneMenu value="#{presidenteBean.presidente.pais.idPais}">
+                            <f:selectItems value="#{presidenteBean.paises}" var="pr" 
+                                           itemLabel="#{pr.nombre}" itemValue="#{pr.idPais}"/>
+                            </p:selectOneMenu>
+                        </h:panelGrid>
+                        <p:commandButton value="#{str.buttonSave}" 
+                                         action="#{presidenteBean.guardar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonDelete}"
+                                         action="#{presidenteBean.eliminar()}"></p:commandButton>
+                        <p:commandButton value="#{str.buttonCancel}" 
+                                         action="#{presidenteBean.cancelar()}"></p:commandButton>
+                    </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>utng.configuracion.strings</base-name>
+            <var>str</var>
+        </resource-bundle>
+    </application>
+    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Inicio</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    
+        <navigation-case>
+            <from-outcome>Usuarios</from-outcome>
+            <to-view-id>/Usuarios/list-usuarios.xhtml</to-view-id>
+        </navigation-case>
+      
+        <navigation-case>
+            <from-outcome>Roles</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Modulos</from-outcome>
+            <to-view-id>/modulos/list-modulos.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Paises</from-outcome>
+            <to-view-id>/paises/list-paises.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Presidentes</from-outcome>
+            <to-view-id>/presidentes/list-presidentes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/Usuarios/form-Usuarios.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/Usuarios/list-Usuarios.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/Usuarios/list-Usuarios.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/Usuarios/list-Usuarios.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/Usuarios/list-Usuarios.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/Usuarios/form-Usuarios.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/Usuarios/form-Usuarios.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/paises/form-paises.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/paises/list-paises.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/paises/list-paises.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/paises/list-paises.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>        
+    
+    <navigation-rule>
+        <from-view-id>/paises/list-paises.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/paises/form-paises.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/paises/form-paises.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+  
+    <navigation-rule>
+        <from-view-id>/presidentes/form-presidentes.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/presidentes/list-presidentes.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/presidentes/list-presidentes.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/presidentes/list-presidentes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>        
+    
+    <navigation-rule>
+        <from-view-id>/presidentes/list-presidentes.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/presidentes/form-presidentes.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/presidentes/form-presidentes.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+    
+    <navigation-rule>
+        <from-view-id>/roles/form-roles.xhtml</from-view-id>
+            <navigation-case>
+                <from-outcome>Guardar</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>Eliminar</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>Cancelar</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/roles/list-roles.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/roles/form-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/roles/form-roles.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/modulos/form-modulos.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Guardar</from-outcome>
+            <to-view-id>/modulos/list-modulos.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Eliminar</from-outcome>
+            <to-view-id>/modulos/list-modulos.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Cancelar</from-outcome>
+            <to-view-id>/modulos/list-modulos.xhtml</to-view-id>
+        </navigation-case>        
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/modulos/list-modulos.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Iniciar</from-outcome>
+            <to-view-id>/modulos/form-modulos.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Editar</from-outcome>
+            <to-view-id>/modulos/form-modulos.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Correcto</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incorrecto</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    </faces-config>
